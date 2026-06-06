@@ -87,4 +87,3 @@ for gate in gates:
     st.write("---")
 
 # Nota al pie sobre IA (Se mantiene al final de la página)
-st.caption("Nota: El código fuente de este simulador fue desarrollado con la asistencia de la inteligencia artificial Gemini.")
