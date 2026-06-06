@@ -1,0 +1,18 @@
+# Esto es un comentario: Ignorar mis otros desafíos de código
+promedio_notas.py
+desafio_14.py
+carrera_autos.py
+codigo_sorteo.py
+desafio_17.py
+ejercicio_promedio.py
+practica_botones.py
+tarea 2.4 grados.py
+tarea 2.4 numeros.py
+
+
+# Ignorar carpetas enteras de pruebas (si tuvieras alguna)
+/pruebas_locales/
+
+# Ignorar archivos ocultos del sistema (buena práctica)
+.DS_Store
+Thumbs.db
