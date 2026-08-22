@@ -3,12 +3,12 @@ import os
 import time
 os.system('cls' if os.name == 'nt' else 'clear')
 
-def char_to_ascii(char):
-    return ord(char)    #ord() devuelve el valor ASCII de un caracter
-lista_caracteres = []
-print("         Programa para convertir numeros a ASCII.       " )
+def ascii_to_char(num_ascii):
+    return chr(int(num_ascii))    #chr() devuelve el caracter de un valor ASCII
+lista_codigos = []
+print("         Programa para convertir ASCII a caracteres       " )
 print("")
-print("Ingrese numeros para convertir a ASCII. Escriba 'ok' para finalizar.")
+print("Ingrese numeros para convertir  ASCII a caracteres. Escriba 'ok' para finalizar.")
 
 
 while True:
@@ -18,15 +18,15 @@ while True:
     if caracter == '':
         print("No se ha ingresado ningún numero, intente de nuevo.")
         continue
-    if len(caracter) > 1:
-        print("Se ha ingresado más de un numero, intente de nuevo.")
+    if int(caracter) < 0 or int(caracter) > 255:
+        print("Error: El número debe estar en el rango de 0 a 255.")
         continue
     if not caracter.isdigit():
         print("No se ha ingresado un numero válido, intente de nuevo.")
         continue
-    lista_caracteres.append(caracter)
+    lista_codigos.append(caracter)
 
-for caracter in lista_caracteres:
-    print(f'El valor ASCII de "{caracter}" es: {char_to_ascii(caracter)}')
+for codigo in lista_codigos:
+    print(f'El caracter de valor ASCII "{codigo}" es: {ascii_to_char(codigo)}')
 
 print("Gracias por usar el programa. ¡Hasta luego!")
