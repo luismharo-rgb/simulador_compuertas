@@ -1,0 +1,12 @@
+def pedir_limite_sup_inf():
+    while(True):
+        try:
+            sup = int(input("Ingrese el límite superior: "))
+            inf = int(input("Ingrese el límite inferior: "))
+            if sup > 0 and inf > 0:
+                return sup, inf
+            else:
+                print("Por favor, ingrese un número positivo.")
+        except ValueError:
+            print("Entrada inválida. Por favor, ingrese un número entero.")
+
