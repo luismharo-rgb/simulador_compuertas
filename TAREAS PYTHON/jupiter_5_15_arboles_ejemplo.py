@@ -4,11 +4,11 @@ class Nodo:
         self.der = None
         self.val = key
 
-def print_preorder(raiz):
+def preorder(raiz):
     if raiz:
         print(raiz.val, end=" ")
-        print_preorder(raiz.izq)
-        print_preorder(raiz.der)
+        preorder(raiz.izq)
+        preorder(raiz.der)
 
 
 
@@ -35,4 +35,4 @@ raiz.izq.der.der = Nodo(9)
 raiz.der.der.izq = Nodo(10)
 raiz.der.der.der = Nodo(11)
 
-print_preorder(raiz)  # Salida esperada: 1 2 4 5 8 9 3 6 7 10 11 
+preorder(raiz)  # Salida esperada: 1 2 4 5 8 9 3 6 7 10 11 
