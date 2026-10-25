@@ -1,39 +1,34 @@
-class Nodo:
+class Nodo: # clase que define un nodo en un árbol binario
     def __init__(self, key):
-        self.izq = None
-        self.der = None
-        self.val = key
+        self.izq = None # nodo izquierdo
+        self.der = None # nodo derecho
+        self.val = key # valor del nodo
 
-def preorder(raiz):
+def preorder(raiz): # funcion que recorre el árbol en preorden
     if raiz:
-        print(raiz.val, end=" ")
-        preorder(raiz.izq)
-        preorder(raiz.der)
+        print(raiz.val, end=" ") # imprime el valor del nodo
+        preorder(raiz.izq) # recorre el subárbol izquierdo en recursivo
+        preorder(raiz.der) # recorre el subárbol derecho en recursivo
 
-# Crear el nodo raíz
+# Titulo del programa
 print()
 print("-" * 50)
 print("Recorrido Preorden del árbol binario:")
 print("-" * 50)
-
+# Crear el nodo raíz y los nodos hijos
 raiz = Nodo(1)
-print("Nodo raíz:", raiz.val)
 raiz.izq = Nodo(2)
-print("Nodo hijo izquierdo del raíz:", raiz.izq.val)
 raiz.der = Nodo(3)  
-print("Nodo hijo derecho del raíz:", raiz.der.val)
 raiz.izq.izq = Nodo(4)
-print("Nodo hijo izquierdo del hijo izquierdo del raíz:", raiz.izq.izq.val)
 raiz.izq.der = Nodo(5)
-print("Nodo hijo derecho del hijo izquierdo del raíz:", raiz.izq.der.val)
 raiz.der.izq = Nodo(6)
-print("Nodo hijo izquierdo del hijo derecho del raíz:", raiz.der.izq.val)
 raiz.der.der = Nodo(7)
-print("Nodo hijo derecho del hijo derecho del raíz:", raiz.der.der.val)
+# imprime un resultado 
 print("-" * 50)
 print("Recorrido Preorden del árbol binario:")
 print("-" * 50)
 print()
+# esta es la llamada de la función que recorre el árbol en preorden 
 preorder(raiz)
 print()
 print("-" * 50)
